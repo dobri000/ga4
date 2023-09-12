@@ -1,0 +1,152 @@
+
+.container {
+  background-color: #eaeef3;
+  padding: 10px;
+}
+
+.title {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.head-analytics {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 78% 20%;
+  gap: 2%;
+}
+
+.chart-box {
+  margin-right: 7px;
+}
+
+.chart-head {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+}
+
+.chart-title {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.chart-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #9cb7da;
+}
+
+.total-analytics-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 20% 40% 40%;
+  height: 50%;
+  box-shadow: 0 0 20px #9cb7da;
+}
+
+.total-analytics-container-title {
+  font-size: 30px;
+}
+
+.total-analitycs-box {
+  border-width: 1px 0 0 0;
+  border-style: solid dashed;
+  border-color: rgba(220, 220, 220);
+}
+
+.total-analytics-title {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.total-analitycs-value {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 8px;
+  color: #1262c9;
+  font-weight: bold;
+}
+
+select {
+  height: 30px;
+  border-radius: 15px;
+  color: #1262c9;
+}
+
+.posts-counter-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 30% 30% 30%;
+  gap: 5%;
+  height: 40%;
+  margin-top: 20px;
+  box-shadow: 0 0 20px #9cb7da;
+}
+
+.post-counter {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.post-counter-name {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.post-counter-value {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #1262c9;
+}
+
+.listings {
+  width: 77%;
+  padding: 10px;
+}
+
+.list-head {
+  font-size: 30px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.table-head {
+  display: grid;
+  grid-template-columns: 50% 20% 20%;
+  gap: 5%;
+  padding: 10px;
+  border-width: 0 0 1px 0;
+  border-style: solid dashed;
+  border-color: rgba(220, 220, 220);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.list {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #9cb7da;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.list-data {
+  display: grid;
+  grid-template-columns: 50% 20% 20%;
+  gap: 5%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.list-value {
+    color: #1262c9;
+}

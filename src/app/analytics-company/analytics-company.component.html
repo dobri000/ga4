@@ -1,0 +1,85 @@
+<div class="container">
+
+    <div class="title">Kompanija {{companyName}}</div>
+    <div class="head-analytics">
+        <div class="chart-container">
+            <div class="chart-head">
+                <span class="chart-title">Grafikoni</span>
+                <span class="select-container">
+                    <select class="form-control" id="select-data" (change)="setChartData($event)">
+                        <option value="pageViews">Pregleda stranice</option>
+                        <option value="averageTime">Prosečno vreme na stranici</option>
+                    </select>
+                </span>
+                <span class="select-container">
+                    <select class="form-control" id="time-range" (change)="setChartDays($event)">
+                        <option value="30">Prošli mesec</option>
+                        <option value="7">Prošlih 7 dana</option>
+                    </select>
+                </span>
+            </div>
+            <div class="chart-box">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+        <div class="total-metrics">
+            <div class="total-analytics-container">
+                <div class="total-analytics-container-title">Proteklih 30 dana</div>
+                <div class="total-analitycs-box">
+                    <div class="total-analytics-title">Pregleda stranice</div>
+                    <div class="total-analitycs-value">{{companyViews}}</div>
+                </div>
+                <div class="total-analitycs-box">
+                    <div class="total-analytics-title">Prosečno provedeno vreme</div>
+                    <div class="total-analitycs-value">{{averageTimeOnCompanyPage}}s</div>
+                </div>
+            </div>
+            <div class="posts-counter-container">
+                <div class="post-counter">
+                    <span class="post-counter-name">Standardni oglasi:</span>
+                    <span class="post-counter-value">{{standardAds}}</span>
+                </div>
+                <div class="post-counter">
+                    <span class="post-counter-name">Premium oglasi:</span>
+                    <span class="post-counter-value">{{premiumAds}}</span>
+                </div>
+                <div class="post-counter">
+                    <span class="post-counter-name">Vesti:</span>
+                    <span class="post-counter-value">{{conferencesAndVoulonteerings}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="listings">
+        <div class="list">
+            <div class="list-head">Oglasi</div>
+            <div class="table-head">
+                <span>Naziv oglasa</span>
+                <span>Broj pregleda oglasa</span>
+                <span>Prosečno provedeno vreme</span>
+            </div>
+            <div class="ads" id="ads">
+                <div *ngFor="let ad of ads" class="list-data">
+                    <span>{{ad.adName}}</span>
+                    <span class="list-value">{{ad.adViews}}</span>
+                    <span class="list-value">{{ad.averageTimeOnAdPage}}s</span>
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="list-head">Blogovi</div>
+            <div class="table-head">
+                <span>Naziv bloga</span>
+                <span>Broj pregleda bloga</span>
+                <span>Prosečno provedeno vreme</span>
+            </div>
+            <div class="blogs" id="blogs">
+                <div *ngFor="let blog of blogs" class="list-data">
+                    <span>{{blog.blogName}}</span>
+                    <span class="list-value">{{blog.blogViews}}</span>
+                    <span class="list-value">{{blog.averageTimeOnBlogPage}}s</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

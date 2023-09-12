@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="head-container shaddow-box">
+    <span class="head-analytics right-border">
+      <div class="head-analytics-title">Registrovani studenti</div>
+      <div class="head-analytics-value">{{ registeredStudents }}</div>
+    </span>
+    <span class="head-analytics right-border">
+      <div class="head-analytics-title">Registrovani zaposleni</div>
+      <div class="head-analytics-value">{{ registeredEmployees }}</div>
+    </span>
+    <span class="head-analytics right-border">
+      <div class="head-analytics-title">Registrovane kompnaije</div>
+      <div class="head-analytics-value">{{ registeredCompanies }}</div>
+    </span>
+    <span class="head-analytics right-border">
+      <div class="head-analytics-title">Standardni oglasi</div>
+      <div class="head-analytics-value">{{ standardAds }}</div>
+    </span>
+    <span class="head-analytics">
+      <div class="head-analytics-title">Premium oglasi</div>
+      <div class="head-analytics-value">{{ premiumAds }}</div>
+    </span>
+  </div>
+  <div class="middle-analytics">
+    <div class="charts">
+      <div class="chart-container shaddow-box">
+        <div class="chart-head">
+          <span class="chart-title">Grafikoni</span>
+          <span class="select-container">
+            <select
+              class="form-control"
+              id="select-data"
+              (change)="setChartData($event)"
+            >
+              <option value="pageViews">Pregleda stranice</option>
+              <option value="averageTimeOnPages">
+                Prosečno vreme na stranici
+              </option>
+              <option value="newUsers">Novi korisnici</option>
+              <option value="sessions">Broj sesija</option>
+              <option value="activeUsers">Jedinstveni korisnici</option>
+              <option value="averageSessionDuration">
+                Prosečno vreme sesije
+              </option>
+            </select>
+          </span>
+          <span class="select-container">
+            <select
+              class="form-control"
+              id="time-range"
+              (change)="setChartDays($event)"
+            >
+              <option value="30">Prošli mesec</option>
+              <option value="7">Prošlih 7 dana</option>
+            </select>
+          </span>
+        </div>
+        <div class="chart-box">
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+      <div class="source-analytics shaddow-box">
+        <div class="chart-title">Izvori saobracaja</div>
+        <div class="source-box">
+            <div class="chart-box">
+                <canvas id="chartSource"></canvas>
+              </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="total-analytics-container shaddow-box">
+        <div class="total-analytics-container-title">Proteklih 30 dana</div>
+
+        <div class="total-analitycs-box">
+          <div class="total-analytics-title">Novih korisnika</div>
+          <div class="total-analitycs-value">{{ newUsers }}</div>
+        </div>
+        <div class="total-analitycs-box">
+          <div class="total-analytics-title">Sesija</div>
+          <div class="total-analitycs-value">{{ sessions }}</div>
+        </div>
+        <div class="total-analitycs-box">
+          <div class="total-analytics-title">Jedinstvenih korisnika</div>
+          <div class="total-analitycs-value">{{ activeUsers }}</div>
+        </div>
+        <div class="total-analitycs-box">
+          <div class="total-analytics-title">Prosečno vreme sesije</div>
+          <div class="total-analitycs-value">{{ averageSessionDuration }}s</div>
+        </div>
+        <div class="total-analitycs-box">
+          <div class="total-analytics-title">Prosečno vreme na stranicama</div>
+          <div class="total-analitycs-value">{{ averageTimeOnPages }}s</div>
+        </div>
+        <div class="total-analitycs-box">
+          <div class="total-analytics-title">Registrovanih kompanija</div>
+          <div class="total-analitycs-value">
+            {{ registeredCompaniesPeriod }}
+          </div>
+        </div>
+        <div class="total-analitycs-box">
+          <div class="total-analytics-title">Standardnih oglasa</div>
+          <div class="total-analitycs-value">{{ standardAdsPeriod }}</div>
+        </div>
+        <div class="total-analitycs-box">
+          <div class="total-analytics-title">Premium oglasa</div>
+          <div class="total-analitycs-value">{{ premiumAdsPeriod }}</div>
+        </div>
+      </div>
+  </div>
+</div>
